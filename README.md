@@ -9,3 +9,4 @@ Welcome to **ShopBuzz**, your one-stop destination for buying fresh and organic 
 - **Easy Navigation**: User-friendly interface for easy browsing and ordering.
 - **Secure Payment**: Safe and secure payment options for hassle-free transactions.
 - **Fast Delivery**: Quick and reliable delivery to ensure fruits reach you in the best condition.
+- **Easy Returns**: You can easily return our products in case of damage.
