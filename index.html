@@ -6,12 +6,34 @@
     <title>ShopBuzz - Your Dream Shop!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" href="image/shop.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: "Roboto", sans-serif;
+    }
+</style>
 </head>
 <body>
     <header>
         <!-- navbar start here -->
-        <nav>
-            
+        <nav class="h-14 bg-green-600 flex items-center justify-between px-5">
+            <div>
+               <a href="#"> <h1 class="text-3xl font-semibold text-gray-800">Shop<span class="text-red-600">B</span>u<span class="text-red-600">zz</span></h1></a>
+            </div>
+            <div>
+                <ul class="flex items-center -ml-28 text-lg">
+                    <li class="hover:bg-green-500 h-14 px-3 flex items-center hover:cursor-pointer">Home</li>
+                    <li class="hover:bg-green-500 h-14 px-3 flex items-center hover:cursor-pointer">Fruits</li>
+                    <li class="hover:bg-green-500 h-14 px-3 flex items-center hover:cursor-pointer">Favorite</li>
+                    <li class="hover:bg-green-500 h-14 px-3 flex items-center hover:cursor-pointer">Contact</li>
+                    <li class="hover:bg-green-500 h-14 px-3 flex items-center hover:cursor-pointer">About</li>
+                </ul>
+            </div>
+            <div>
+                <button>Login</button>
+            </div>
         </nav>
     </header>
     <main>
