@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopBuzz - Your Dream Shop!</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="image/shop.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/2c2c3a511e.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <style>
     *{
@@ -16,15 +18,15 @@
 </style>
 </head>
 <body>
-    <header>
+    <header class="relative">
         <!-- navbar start here -->
-        <nav class="h-14 bg-green-600 flex items-center justify-between px-5">
-            <div class="flex items-center justify-center gap-2.5">
-                <a href="#"><img class="h-10 w-10" src="image/bag.png" alt="Logo"></a>
-               <a href="#" class=""> <h1 class="text-3xl font-semibold text-gray-800">Shop<span class="text-red-600">B</span>u<span class="text-red-600">zz</span></h1></a>
+        <nav class="h-12 lg:h-14 bg-green-600 flex items-center justify-between px-3 md:px-4 lg:px-5">
+            <div class="flex items-center justify-center gap-1.5 md:gap-2 lg:gap-2.5">
+                <a href="#"><img class="h-7 w-7 md:w-8 md:h-8 lg:h-10 lg:w-10" src="image/bag.png" alt="Logo"></a>
+               <a href="#" class=""> <h1 class="text-2xl md:text-3xl font-semibold text-gray-800">Shop<span class="text-red-600">B</span>u<span class="text-red-600">zz</span></h1></a>
             </div>
-            <div>
-                <ul class="flex items-center -ml-28 text-lg">
+            <div class="hidden lg:block">
+                <ul class="flex items-center -ml-24 text-lg">
                     <li class="hover:bg-green-500 hover:text-gray-100 h-14 px-3 flex items-center hover:cursor-pointer">Home</li>
                     <li class="hover:bg-green-500 hover:text-gray-100 h-14 px-3 flex items-center hover:cursor-pointer">Fruits</li>
                     <li class="hover:bg-green-500 hover:text-gray-100 h-14 px-3 flex items-center hover:cursor-pointer">Favorite</li>
@@ -32,14 +34,195 @@
                     <li class="hover:bg-green-500 hover:text-gray-100 h-14 px-3 flex items-center hover:cursor-pointer">About</li>
                 </ul>
             </div>
-            <div>
+            <div class="hidden lg:block">
                 <button class="bg-gray-100 font-medium px-4 py-1 text-gray-950 rounded-lg text-lg mr-2 border-2 border-gray-900 hover:bg-gray-900 hover:text-white hover:border-gray-100">Sign Up</button>
                 <button class="bg-gray-900 px-4 py-1 text-gray-100 border-2 border-gray-100 rounded-lg text-lg mr-1 hover:bg-gray-100 hover:text-gray-950 font-medium hover:border-gray-900">Login</button>
             </div>
+            <!-- mobile screen -->
+             <div class="block lg:hidden">
+                <i class="fa-solid fa-bars text-xl"></i>
+             </div>
         </nav>
+        <!-- banner title -->
+        <div class="absolute top-[36%] right-[22%] z-50"> 
+            <div class="text-center">
+                <h1 class="text-2xl md:text-6xl font-bold text-gray-50 mb-4" style="text-shadow: 2px 2px 2px black;">Welcome to ShopBuzz Fruits</h1>
+            <p class="text-base md:text-2xl font-semibold w-40 md:w-full text-gray-100 mb-5" style="text-shadow: 2px 2px 2px #000000;">Explore our wide selection of seasonal fruits and enjoy healthy living!</p>
+            <button class="bg-gray-900 px-6 py-2 text-gray-100 border-2 border-gray-100 rounded-lg text-lg mr-1 hover:bg-gray-100 hover:text-gray-950 font-medium hover:border-gray-900">Learn More</button>
+            </div>
+        </div>
+        <!-- banner goes here -->
+        <div class="carousel w-full h-56 md:h-80 xl:h-[400px] relative">
+               
+
+            <div id="slide1" class="carousel-item relative w-full">
+              <img
+                src="image/banner-1.jpg"
+                class="w-full object-cover" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide4" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❮</a>
+                <a href="#slide2" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+              <img
+                src="image/banner-2.jpg"
+                class="w-full object-cover" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❮</a>
+                <a href="#slide3" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+              <img
+                src="image/banner-3.jpg"
+                class="w-full object-cover" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❮</a>
+                <a href="#slide4" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❯</a>
+              </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+              <img
+                src="image/banner-4.jpg"
+                class="w-full object-cover" />
+              <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❮</a>
+                <a href="#slide1" class="btn text-white bg-[#121212] hover:text-gray-900 btn-circle">❯</a>
+              </div>
+            </div>
+          </div>
+
     </header>
     <main>
-
+      <section class="my-10">
+        <h1 class="text-center text-green-600 font-semibold text-5xl">Popular Fruit</h1>
+        <p class="text-center mt-5 text-lg text-gray-800 font-medium">This fruit is being popular of this week!</p>
+        <div class="mx-8 mt-6 flex justify-center gap-8">
+          <!-- card 1 -->
+          <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1464454709131-ffd692591ee5?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="strwberry" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Strwberry!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 2 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1517260911058-0fcfd733702f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZydWl0fGVufDB8fDB8fHww"
+                alt="Pineapple" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Pineapple!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 3 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1456295198429-05d2315cfebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGZydWl0fGVufDB8fDB8fHww"
+                alt="Grapes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Grapes!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 4 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1532704868953-d85f24176d73?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Peaches" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Peaches!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mx-8 mt-8 flex justify-center gap-8">
+          <!-- card 1 -->
+          <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1464454709131-ffd692591ee5?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="strwberry" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Strwberry!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 2 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1517260911058-0fcfd733702f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGZydWl0fGVufDB8fDB8fHww"
+                alt="Pineapple" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Pineapple!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 3 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1456295198429-05d2315cfebb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGZydWl0fGVufDB8fDB8fHww"
+                alt="Grapes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Grapes!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+           <!-- card 4 -->
+           <div class="card card-compact bg-base-100 w-96 shadow-xl">
+            <figure class="h-52">
+              <img
+                src="https://images.unsplash.com/photo-1532704868953-d85f24176d73?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Peaches" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Peaches!</h2>
+              <p>Fresh food fresh life!</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-success text-white">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
 
